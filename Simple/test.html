@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./test.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="drop_container">
+      <div class="drop_header">
+        <span>Click Open</span>
+      </div>
+      <div class="dropdown input">
+        <ul>
+          <li>first</li>
+          <li>second</li>
+          <li>third</li>
+          <li>fourth</li>
+          <li>sixth</li>
+          <li>seven</li>
+        </ul>
+      </div>
+      <br />
+    </div>
+
+    <div>
+      wiuegfwe fkwegfuiwef weiufhgiwef w ejkfbiwuegfw efiugwef \n
+      iwuegfiewugfiwegf
+    </div>
+  </body>
+  <script>
+    document
+      .getElementsByClassName("drop_header")[0]
+      .addEventListener("click", () => {
+        // if (document.getElementsByClassName("sub_container")[0].style.display == 'none' || document.getElementsByClassName("sub_container")[0].style.display == '') {
+        //     document.getElementsByClassName("sub_container").classList.toggle("sub_container_active")
+        // }
+        // else {
+        //     document.getElementsByClassName("sub_container_active").classList.toggle("sub_container")
+        // }
+        document
+          .getElementsByClassName("dropdown")[0]
+          .classList.toggle("active");
+      });
+
+      document
+      .getElementById("input").addEventListener("keypress", function (event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+          console.log(event.key)
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document
+          .getElementsByClassName("dropdown")[0]
+          .classList.toggle("active");
+      }
+    });
+  </script>
+</html>
